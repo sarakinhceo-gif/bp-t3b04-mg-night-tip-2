@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b04-mg-night-tip-2</title>
+  <meta name="description" content="t3b04-mg-night-tip-2에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://magok-night-zone.program-school.online/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ :root {
+ --bg-primary: #0a0f14;
+ --bg-secondary: #111a22;
+ --accent-teal: #00e5ff;
+ --accent-teal-dim: #00838f;
+ --text-primary: #e0e0e0;
+ --text-secondary: #90a4ae;
+ --border-color: #263238;
+ --card-shadow: 0 8px 24px rgba(0, 229, 255, 0.08);
+ --font-mono: 'Courier New', monospace;
+ --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+ }
+ body {
+ background-color: var(--bg-primary);
+ color: var(--text-primary);
+ font-family: var(--font-sans);
+ line-height: 1.7;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 2rem 1.5rem;
+ }
+ .n-card-xvvb {
+ background: var(--bg-secondary);
+ border: 1px solid var(--border-color);
+ padding: 2rem;
+ border-radius: 2px;
+ box-shadow: var(--card-shadow);
+ transition: border-color 0.2s ease;
+ }
+ .n-card-xvvb:hover {
+ border-color: var(--accent-teal-dim);
+ }
+ .x-grid-86vj {
+ width: 100%;
+ max-width: 1100px;
+ display: flex;
+ flex-direction: column;
+ gap: 2.5rem;
+ }
+ .x-img-3xds {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 1rem;
+ padding-bottom: 1.5rem;
+ border-bottom: 2px solid var(--border-color);
+ }
+ .x-img-3xds .logo-area {
+ display: flex;
+ align-items: baseline;
+ gap: 0.5rem;
+ }
+ .x-img-3xds .logo-text {
+ font-family: var(--font-mono);
+ font-size: 1.8rem;
+ font-weight: 700;
+ color: var(--accent-teal);
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ }
+ .x-img-3xds .logo-sub {
+ font-family: var(--font-mono);
+ font-size: 0.8rem;
+ color: var(--text-secondary);
+ letter-spacing: 1px;
+ }
+ .t-ico-przt ul {
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ flex-wrap: wrap;
+ background: var(--bg-secondary);
+ padding: 0.8rem 1.8rem;
+ border: 1px solid var(--border-color);
+ border-radius: 2px;
+ }
+ .t-ico-przt li {
+ font-family: var(--font-mono);
+ font-size: 0.9rem;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+ .t-ico-przt li:last-child {
+ margin-left: auto;
+ }
+ .t-ico-przt a {
+ color: var(--text-secondary);
+ text-decoration: none;
+ transition: color 0.2s;
+ padding-bottom: 2px;
+ border-bottom: 1px solid transparent;
+ }
+ .t-ico-przt a:hover {
+ color: var(--accent-teal);
+ border-bottom: 1px solid var(--accent-teal);
+ }
+ .main-split {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ }
+ .info-block {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ }
+ .info-block h2 {
+ font-family: var(--font-mono);
+ font-size: 1.3rem;
+ color: var(--accent-teal);
+ letter-spacing: 1px;
+ border-left: 4px solid var(--accent-teal-dim);
+ padding-left: 1rem;
+ }
+ .info-block p {
+ color: var(--text-primary);
+ font-size: 1rem;
+ margin-bottom: 0.8rem;
+ }
+ .info-block .highlight {
+ color: var(--accent-teal);
+ font-weight: 600;
+ font-family: var(--font-mono);
+ background: rgba(0, 229, 255, 0.05);
+ padding: 0.2rem 0.5rem;
+ border-radius: 2px;
+ }
+ .faq-section {
+ grid-column: 1 / -1;
+ margin-top: 1rem;
+ }
+ .faq-item {
+ background: var(--bg-secondary);
+ border: 1px solid var(--border-color);
+ padding: 1.5rem;
+ margin-bottom: 1rem;
+ border-radius: 2px;
+ }
+ .faq-item h3 {
+ font-family: var(--font-mono);
+ color: var(--accent-teal);
+ margin-bottom: 0.7rem;
+ font-size: 1.1rem;
+ }
+ .data-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 1rem;
+ font-size: 0.9rem;
+ }
+ .data-table th {
+ text-align: left;
+ color: var(--accent-teal);
+ font-family: var(--font-mono);
+ padding: 0.7rem;
+ border-bottom: 1px solid var(--accent-teal-dim);
+ font-weight: 500;
+ }
+ .data-table td {
+ padding: 0.7rem;
+ border-bottom: 1px solid var(--border-color);
+ color: var(--text-primary);
+ }
+ .signal-badge {
+ display: inline-block;
+ background: var(--accent-teal-dim);
+ color: #000;
+ font-family: var(--font-mono);
+ font-size: 0.7rem;
+ padding: 0.2rem 0.6rem;
+ border-radius: 2px;
+ font-weight: 700;
+ letter-spacing: 0.5px;
+ margin-right: 0.5rem;
+ }
+ @media (max-width: 768px) {
+ .main-split {
+ grid-template-columns: 1fr;
+ }
+ .x-img-3xds {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+ .t-ico-przt ul {
+ flex-direction: column;
+ gap: 1rem;
+ }
+ .t-ico-przt li:last-child {
+ margin-left: 0;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b04-mg-night-tip-2">
+  <meta property="og:description" content="t3b04-mg-night-tip-2에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://magok-night-zone.program-school.online/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="x-img-3xds">
+ <div class="site-title">
+ <span class="logo-text">MAGOK NIGHT</span>
+ <span class="logo-sub">TRANSIT MAP</span>
+ </div>
+ <nav class="t-ico-przt">
+ <ul>
+ <li><a href="#">개요</a></li>
+ <li><a href="#">공간비교</a></li>
+ <li><a href="#">정보</a></li>
+ <li><a href="#">시간대분석</a></li>
+ <li><a href="#">FAQ</a></li>
+ </ul>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-031.html">마곡에서 즐거운 저녁 시간을 계획하는 방법</a>
+        <p class="post-item__summary">마곡은 대규모 업무 단지가 형성되면서 다양한 형태의 유흥 시설과 회식 장소가 밀집해 있습니다. 이곳에서 저녁 시간을 효율적으로 보내기 위해서는 자신이 선호하는 분위기를 먼저 파악하는 것이 중요합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-704.html">마곡 유흥 즐기기 전 확인해야 할 에티켓과 이용 요령</a>
+        <p class="post-item__summary">마곡지구는 최근 직장인들이 밀집한 중심지로 떠오르면서 저녁 시간대 활기찬 분위기를 자아냅니다. 이곳에서 유흥을 즐길 때는 무엇보다 방문하려는 장소의 성격과 예약 방식이 무엇인지 사전에 파악하는 것이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0103.html">마곡 유흥 꿀팁 활용해 동대문에서 피로 푸는 마사지 예약법</a>
+        <p class="post-item__summary">많은 이들이 밤 문화를 즐기는 장소를 찾을 때 마곡 유흥 꿀팁 같은 정보를 검색하며 시간을 허비하곤 합니다. 하지만 정작 제대로 된 휴식을 취하지 못하고 당일 즉흥적으로 업체를 방문했다가 낭패를 보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0104.html">마곡 유흥 꿀팁 리스트와 마포/합정 인디 소셜 라운지 가이드</a>
+        <p class="post-item__summary">일반적인 마곡 유흥 꿀팁 정보와는 차별화된, 프라이빗한 모임을 원한다면 마포와 합정 일대를 주목할 필요가 있습니다. 소인원 파티는 공간의 분위기와 접근성에 따라 만족도가 크게 갈리기 때문에 방문 전</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0105.html">마곡 유흥 꿀팁 활용한 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드</a>
+        <p class="post-item__summary">특정 지역의 정보를 탐색하다 보면 예기치 않게 웹사이트의 건강 상태를 점검해야 하는 순간이 찾아옵니다. 마곡 유흥 꿀팁을 검색하는 사용자들이 의외로 웹 운영의 기초를 간과하여 페이지의 신뢰도가 하락</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0106.html">마곡 유흥 꿀팁 기반의 콘텐츠 급수 정화 정보</a>
+        <p class="post-item__summary">많은 이들이 인터넷상에 글을 올리기만 하면 자동으로 영향력이 커질 것이라는 오해를 합니다. 마곡 유흥 꿀팁 정보를 찾는 사용자들에게 정보를 제공하는 과정에서도 마찬가지로 단순히 글자만 나열한다고 해</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0107.html">마곡 유흥 꿀팁 활용한 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">적절한 모임 장소를 찾는 것은 행사의 성공 여부를 결정짓는 가장 중요한 요소입니다. 마곡 유흥 꿀팁 정보를 참고하여 적절한 분위기를 파악하듯, 단체 모임 또한 예산, 인원, 그리고 서비스의 질이라는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0108.html">마곡 유흥 꿀팁 기반의 마포 홍대 로컬 럭셔리 밤문화 가이드</a>
+        <p class="post-item__summary">여러분은 평소에 밤문화 정보를 어디서 얻고 계신가요? 마곡 유흥 꿀팁을 찾아보는 것과 마찬가지로, 본인에게 딱 맞는 공간을 찾기 위해서는 정보의 옥석을 가리는 눈이 필요합니다. 쏟아지는 광고성 정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0109.html">마곡 유흥 꿀팁 활용한 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 전략</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁 정보를 찾다 보면 자연스럽게 마포 지역의 셔츠룸을 접하게 됩니다. 많은 이들이 경험을 공유하지만, 정보의 홍수 속에서 진실된 후기를 가려내는 안목이 필요합니다. 오늘은 업계에서 통용</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0110.html">마곡 유흥 꿀팁 선택과 4</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁 관련 데이터가 넘쳐나는 요즘, 자신에게 필요한 정보만을 추출하는 자동화 기술에 관심이 높습니다. 개인의 시간과 비용을 절약하기 위해 루프 기반의 자동화 시스템을 구축하려는 수요가 늘</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0111.html">마곡 유흥 꿀팁 기반 마포 셔츠룸 예약 시 눈탱이 피하는 법 총정리</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁 정보를 참고하여 즐거운 시간을 계획할 때 가장 주의해야 할 점은 예약 과정입니다. 많은 소비자가 검증되지 않은 경로를 통해 예약했다가 예상치 못한 비용 지출로 곤란을 겪곤 합니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0112.html">마곡 유흥 꿀팁 필수 체크리스트 활용한 셔츠룸 예약 및 셔츠룸 이용법</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁 정보를 접할 때 이동 거리와 위치 접근성을 간과하는 경우가 많습니다. 셔츠룸 예약 시 자신의 출발지에서 이동하기 편리한 곳인지 먼저 따져보아야 시간 낭비를 줄일 수 있습니다. 오늘은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0113.html">마곡 유흥 꿀팁 활용을 위한 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호 분석</a>
+        <p class="post-item__summary">최근 디지털 마케팅 환경에서 마곡 유흥 꿀팁 정보를 찾는 방문자가 급증하면서 기술적 최적화의 중요성이 커졌습니다. 웹사이트에 접속한 검색 엔진 로봇이 페이지의 내용을 얼마나 효율적으로 읽어가는지는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0114.html">마곡 유흥 꿀팁 확인하고 마포 단체 회식용 대형 룸 노래방 가격 정보 파악하기</a>
+        <p class="post-item__summary">많은 이들이 단체 회식 장소를 찾을 때 무조건 비싼 곳이 서비스가 좋을 것이라는 흔한 오해를 하곤 합니다. 마곡 유흥 꿀팁을 검색하는 사람들 중 상당수는 비용 대비 최상의 만족을 얻으려 하지만 정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0115.html">마곡 유흥 꿀팁과 함께 살펴보는 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">단체 가라오케를 방문하기 위해서는 공간의 규모, 음향 시설의 수준, 그리고 서비스의 신뢰도라는 세 가지 충족 조건이 필수적입니다. 마곡 유흥 꿀팁 정보를 통해 방문 계획을 세우는 분들이라면 무엇보다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0116.html">마곡 유흥 꿀팁 확인 전 필수인 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">디지털 플랫폼에서 신뢰도 높은 활동을 이어가기 위해 도메인의 평판 관리라는 개념을 알고 계십니까? 마곡 유흥 꿀팁 정보를 찾거나 특정 비즈니스 서비스를 홍보할 때 검색 엔진으로부터 받는 평가는 사이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0117.html">마곡 유흥 꿀팁 활용하는 합정 셔츠룸 단골들이 뽑은 핫플 매거진 정보</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁을 찾는 이들이 합정 지역으로 발걸음을 옮기며 자신만의 명소를 찾기 위해 고군분투합니다. 검증되지 않은 정보가 넘쳐나는 환경에서 진정한 가치를 가진 장소를 선별하는 안목은 필수적입니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0118.html">마곡 유흥 꿀팁 관점에서 본 구글 인덱싱 속도 초고속 광회선 대역폭 최적화</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁을 찾는 과정이 정보의 효율적 분류를 요하듯, 디지털 환경에서도 데이터 인덱싱의 속도는 성패를 가릅니다. 검색 엔진이 콘텐츠를 얼마나 빠르게 인식하고 노출하느냐는 기술적 최적화의 영역</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0119.html">마곡 유흥 꿀팁 정보가 알려주는 구글 신뢰 지수 모발이식 솔루션 예약 안내</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁을 습득하는 과정에서 많은 이들이 실패하는 지점은 검증되지 않은 정보원을 무차별적으로 수용하는 점입니다. 이처럼 디지털 평판이나 의학적 솔루션을 선택할 때도 신뢰 지수를 확인하지 않으</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0486.html">마곡 유흥 꿀팁 적용 전 확인하는 검색엔진 응급수술 가이드</a>
+        <p class="post-item__summary">마곡 유흥 꿀팁을 찾아 헤매는 이용자들은 흔히 검색 엔진의 필터링 기능에 막혀 좌절하곤 한다. 이럴 때 필요한 것이 바로 전문적인 기술 지원인데, 이는 마치 웹사이트가 질병에 걸렸을 때 치료를 받는</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
